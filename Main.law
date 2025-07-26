@@ -1,4 +1,4 @@
-oklocal player = game.Players.LocalPlayer
+local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
 gui.Name = "RestartScreen"
 gui.IgnoreGuiInset = true
@@ -13,7 +13,7 @@ bg.Size = UDim2.new(1, 0, 1, 0)
 
 -- Plug icon (Unicode style, you can customize with your own image)
 local plugIcon = Instance.new("TextLabel", gui)
-plugIcon.Text = "🍃" -- Replace with an image if needed
+plugIcon.Text = "🍃"
 plugIcon.TextScaled = true
 plugIcon.Size = UDim2.new(0, 200, 0, 200)
 plugIcon.Position = UDim2.new(0.5, -100, 0.35, -100)
@@ -35,14 +35,14 @@ mainText.Font = Enum.Font.GothamBold
 local subText = Instance.new("TextLabel", gui)
 subText.Text = "Please wait while we redirect you..."
 subText.TextScaled = true
-subText.Size = UDim2.new(1, 0, 0, 40)
+subText.Size = UDim2.new(1, 0, 0, 39)
 subText.Position = UDim2.new(0, 0, 0.72, 0)
 subText.BackgroundTransparency = 1
 subText.TextColor3 = Color3.new(1, 1, 1)
 subText.Font = Enum.Font.Gotham
 
--- Optional: wait and then remove or do something else
-task.delay(8, function()
-gui:Destroy()
--- Add your redirection code here
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/UpdateZysume"))()
+-- Wait and then redirect
+task.delay(10, function()
+    gui:Destroy()
+    loadstring(game:HttpGet("https://pastefy.app/61lmhmdI/raw"))()
+end)
