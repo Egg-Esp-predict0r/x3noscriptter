@@ -45,4 +45,4 @@ subText.Font = Enum.Font.Gotham
 task.delay(8, function()
 gui:Destroy()
 -- Add your redirection code here
-loadstring(game:HttpGet("https://pastefy.app/uQaVqIUf/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/UpdateZysume"))()
